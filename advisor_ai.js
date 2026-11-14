@@ -164,7 +164,7 @@
         return { sendQuestion };
     }
 
-    async function loadLiveHighlights(containerEl, stampEl, askCallback) {
+    async function loadLiveHighlights(containerEl, stampEl, askCallback, retried) {
         if (!containerEl) return;
         try {
             const resp = await fetch(`${GATEWAY_BASE}/api/highlights`);
@@ -172,10 +172,15 @@
             if (stampEl && data.updated_at) {
                 stampEl.textContent = "更新：" + data.updated_at;
             }
-            if (!data.groups || !data.groups.length) return;
+            if (!data.groups || !data.groups.length) {
+                if (!retried) {
+                    setTimeout(() => loadLiveHighlights(containerEl, stampEl, askCallback, true), 2500);
+                }
+                return;
+            }
             containerEl.innerHTML = "";
             data.groups.forEach((g) => {
-                (g.headlines || []).slice(0, 2).forEach((h) => {
+                (g.headlines || []).slice(0, 3).forEach((h) => {
                     const item = document.createElement("div");
                     item.className = "news-live-item";
                     item.innerHTML = `<span class="news-live-cat">${escapeHtml(g.category)}</span>${escapeHtml(h.title)}`;
