@@ -28,7 +28,9 @@
     }
 
     function renderMarkdown(md) {
-        let html = escapeHtml(md);
+        // 移除公開訪客不需要看到的原始檢索索引數字如 [1], [2, 3]，底部已有清楚「參考依據」標籤
+        let cleanedMd = String(md || "").replace(/\s*\[\d+(?:\s*,\s*\d+)*\]/g, "");
+        let html = escapeHtml(cleanedMd);
         html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:#1E40AF;font-weight:600;text-decoration:underline;">$1</a>');
         html = html.replace(/^####\s+(.+)$/gm, "<h4>$1</h4>");
         html = html.replace(/^###\s+(.+)$/gm, "<h3>$1</h3>");
