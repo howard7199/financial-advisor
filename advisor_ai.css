@@ -1,0 +1,487 @@
+/* === 永豐金證券 劉怡汎業務副理 — AI 理財與 FCN 互動導覽樣式 === */
+
+.hero-cta {
+    flex-wrap: wrap;
+}
+
+.btn-ai-radar {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3730A3 65%, #0F766E 100%);
+    color: #ffffff !important;
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.28);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    position: relative;
+}
+
+.btn-ai-radar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4);
+    filter: brightness(1.06);
+}
+
+.nav-ai-link {
+    color: #FDE68A !important;
+    font-weight: 700 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* --- 首頁與獨立頁 AI 互動導覽專區 --- */
+.ai-advisor-section {
+    padding: 5.5rem 0;
+    background: linear-gradient(160deg, #0F172A 0%, #1E293B 55%, #1E3A8A 100%);
+    color: #F8FAFC;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-advisor-section::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(200, 22, 29, 0.22) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ai-advisor-header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+}
+
+.ai-advisor-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+}
+
+.ai-advisor-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 0.7rem 0;
+}
+
+.ai-advisor-subtitle {
+    color: #CBD5E1;
+    font-size: 1.05rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.ai-workspace-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.ai-side-panel {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    backdrop-filter: blur(12px);
+}
+
+.ai-panel-card {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.1rem;
+}
+
+.ai-panel-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.02rem;
+    color: #FDE68A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fcn-mini-terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.fcn-term-btn {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 0.65rem 0.75rem;
+    color: #F1F5F9;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.fcn-term-btn:hover {
+    background: rgba(200, 22, 29, 0.28);
+    border-color: rgba(248, 113, 113, 0.6);
+    transform: translateY(-2px);
+}
+
+.fcn-term-btn strong {
+    display: block;
+    font-size: 0.88rem;
+    color: #FFFFFF;
+}
+
+.fcn-term-btn span {
+    font-size: 0.75rem;
+    color: #94A3B8;
+}
+
+.news-live-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 290px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.news-live-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #C8161D;
+    border-radius: 6px;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.83rem;
+    color: #E2E8F0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    line-height: 1.45;
+}
+
+.news-live-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.news-live-cat {
+    font-size: 0.72rem;
+    color: #93C5FD;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.ai-chat-card {
+    background: #FFFFFF;
+    color: #1E293B;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-chat-topbar {
+    background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
+    color: #FFFFFF;
+    padding: 1rem 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 2px solid #C8161D;
+}
+
+.ai-chat-topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.ai-avatar-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C8161D, #D4AF37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.ai-chat-topbar h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.ai-chat-topbar p {
+    margin: 2px 0 0 0;
+    font-size: 0.78rem;
+    color: #CBD5E1;
+}
+
+.ai-fullscreen-link {
+    color: #FDE68A;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba(253, 230, 138, 0.45);
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.ai-fullscreen-link:hover {
+    background: rgba(253, 230, 138, 0.15);
+}
+
+.ai-messages-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.25rem;
+    background: #F8FAFC;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ai-msg {
+    max-width: 88%;
+    padding: 0.95rem 1.15rem;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    line-height: 1.68;
+    word-break: break-word;
+}
+
+.ai-msg-bot {
+    align-self: flex-start;
+    background: #FFFFFF;
+    color: #1E293B;
+    border: 1px solid #E2E8F0;
+    border-top-left-radius: 4px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.ai-msg-user {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #1E3A8A, #2563EB);
+    color: #FFFFFF;
+    border-top-right-radius: 4px;
+}
+
+.ai-msg-bot h3, .ai-msg-bot h4 {
+    color: #1E3A8A;
+    margin: 0.8rem 0 0.4rem 0;
+    font-size: 1rem;
+}
+
+.ai-msg-bot ul, .ai-msg-bot ol {
+    margin: 0.4rem 0;
+    padding-left: 1.3rem;
+}
+
+.ai-msg-bot li {
+    margin-bottom: 0.3rem;
+}
+
+.ai-msg-bot strong {
+    color: #991B1B;
+}
+
+.ai-msg-sources {
+    margin-top: 0.7rem;
+    padding-top: 0.55rem;
+    border-top: 1px dashed #CBD5E1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.74rem;
+    color: #64748B;
+}
+
+.ai-source-tag {
+    background: #EFF6FF;
+    color: #1E40AF;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+.ai-chips-bar {
+    padding: 0.65rem 1rem;
+    background: #F1F5F9;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.ai-chip-btn {
+    background: #FFFFFF;
+    color: #1E3A8A;
+    border: 1px solid #BFDBFE;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    flex-shrink: 0;
+}
+
+.ai-chip-btn:hover {
+    background: #1E3A8A;
+    color: #FFFFFF;
+    border-color: #1E3A8A;
+}
+
+.ai-input-area {
+    padding: 0.85rem 1rem;
+    background: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.ai-input-field {
+    flex: 1;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.ai-input-field:focus {
+    border-color: #1E3A8A;
+}
+
+.ai-send-btn {
+    background: linear-gradient(135deg, #C8161D, #991B1B);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1.35rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.ai-send-btn:hover {
+    transform: translateY(-1px);
+}
+
+.ai-send-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.ai-bottom-actions {
+    padding: 0.55rem 1rem;
+    background: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.ai-bottom-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.ai-mini-cta {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+}
+
+.ai-mini-cta-line { background: #DCFCE7; color: #166534; }
+.ai-mini-cta-radar { background: #DBEAFE; color: #1E40AF; }
+.ai-mini-cta-open { background: #FEE2E2; color: #991B1B; }
+
+.ai-fab-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9998;
+    background: linear-gradient(135deg, #C8161D 0%, #1E3A8A 100%);
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    padding: 0.8rem 1.3rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    transition: transform 0.25s ease;
+}
+
+.ai-fab-button:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.ai-fab-drawer {
+    position: fixed;
+    right: 24px;
+    bottom: 86px;
+    width: 390px;
+    max-width: calc(100vw - 32px);
+    height: 540px;
+    max-height: calc(100vh - 120px);
+    z-index: 9999;
+    display: none;
+}
+
+.ai-fab-drawer.open {
+    display: flex;
+}
+
+@media (max-width: 960px) {
+    .ai-workspace-grid {
+        grid-template-columns: 1fr;
+    }
+    .ai-chat-card {
+        height: 560px;
+    }
+    .ai-advisor-title {
+        font-size: 1.75rem;
+    }
+}

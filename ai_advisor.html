@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AI 理財商品／FCN 互動導覽 ＆ 全球財經時事問答 | 永豐金證券天母分公司 - 劉怡汎業務副理</title>
+    <meta content="永豐金證券天母分公司劉怡汎業務副理專屬 AI 理財互動導覽室。即時整合全球與台灣最新財經新聞時事，深度解析 FCN 固定配息結構型商品（KI敲入/KO敲出/執行價機制）、豐存股 ETF 定期定額與海外美股複委託。" name="description"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="advisor_ai.css" rel="stylesheet"/>
+    <link rel="canonical" href="https://howard7199.github.io/financial-advisor/ai_advisor.html"/>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a class="logo-link" href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
+                <img alt="永豐金證券" src="images/sinopac_logo.svg" style="height: 42px;"/>
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                    <span style="font-weight: 700; font-size: 1.35rem; color: #ffffff; letter-spacing: 2px; line-height: 1.1;">永豐金證券</span>
+                    <span style="font-size: 0.75rem; color: #ffffff; letter-spacing: 0.5px; font-weight: 500; font-family: 'Arial', sans-serif;">SinoPac Securities</span>
+                </div>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a class="nav-link" href="index.html#about">關於專員</a>
+                <a class="nav-link" href="index.html#services">服務項目</a>
+                <a class="nav-link nav-ai-link" href="ai_advisor.html">🤖 AI 理財導覽</a>
+                <a class="nav-link" href="index.html#calculator">理財試算</a>
+                <a class="nav-link" href="index.html#faq">常見問題</a>
+                <a class="nav-cta" href="online_open.html">立即開戶</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="ai-advisor-section" id="inline-ai-chat" style="padding-top: 7.5rem; min-height: calc(100vh - 120px);">
+        <div class="container">
+            <div class="ai-advisor-header">
+                <div class="ai-advisor-badge">✨ Google Cloud AI 雙引擎驅動・即時財經時事同步</div>
+                <h1 class="ai-advisor-title">🤖 理財商品／FCN 互動導覽 ＆ 全球財經問答室</h1>
+                <p class="ai-advisor-subtitle">
+                    結合當下最新<strong>全球（美股／聯準會／AI 半導體）與台灣國內財經新聞</strong>，為您全方位解答 <strong>FCN 固定配息結構型商品</strong>、<strong>豐存股 ETF</strong>、<strong>美股複委託</strong>與資產傳承問題。
+                </p>
+            </div>
+
+            <div class="ai-workspace-grid">
+                <div class="ai-side-panel">
+                    <div class="ai-panel-card">
+                        <h3>💰 FCN 結構型商品一鍵導覽</h3>
+                        <div class="fcn-mini-terms">
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="請用白話文完整介紹什麼是 FCN 固定配息結構型商品？適合什麼樣的投資人與市場環境？">
+                                <strong>📌 認識 FCN</strong>
+                                <span>運作原理與適合客群</span>
+                            </button>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="請詳細解釋 FCN 的執行價(Strike)、敲出價(KO提前出場)與敲入價(KI下限保護)分別是什麼意思？什麼情況下會接到股票？">
+                                <strong>🛡️ KI / KO / Strike</strong>
+                                <span>敲入敲出與接股條件</span>
+                            </button>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="在近期全球科技股與聯準會利率震盪環境下，配置 FCN 在挑選連結標的與設定 KI 保護價時要注意什麼風險？">
+                                <strong>⚖️ 震盪市配置法</strong>
+                                <span>時事波動與風險揭露</span>
+                            </button>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="什麼是把 FCN 每月配息轉投入豐存股定期定額的『母錢領息、子錢滾利』雙引擎策略？申購 FCN 需要什麼專業投資人(PI)資格？">
+                                <strong>🔄 母錢配息滾利</strong>
+                                <span>PI 資格與 ETF 搭配</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ai-panel-card" style="flex:1;">
+                        <h3>
+                            <span>🌍 即時全球＆台灣財經焦點</span>
+                            <span id="live-news-stamp" style="font-size:0.72rem;color:#94A3B8;font-weight:400;">同步中...</span>
+                        </h3>
+                        <p style="margin:0 0 0.65rem 0;font-size:0.76rem;color:#94A3B8;">👇 點擊任一新聞標題，AI 立即分析該時事對投資配置的影響：</p>
+                        <div class="news-live-list" id="live-news-list">
+                            <div class="news-live-item">正在載入最新美股、聯準會與台股即時新聞...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-chat-card" style="height: 680px;">
+                    <div class="ai-chat-topbar">
+                        <div class="ai-chat-topbar-info">
+                            <div class="ai-avatar-circle">🤖</div>
+                            <div>
+                                <h4>劉怡汎副理專屬 — AI 理財與全球財經導覽顧問</h4>
+                                <p>支援 FCN 條件機制解說・六大理財服務比較・國內外即時財經問答</p>
+                            </div>
+                        </div>
+                        <a href="https://line.me/R/ti/p/@599erudf" target="_blank" rel="noopener" class="ai-fullscreen-link">🎯 開啟 LINE AI 雷達助理 ↗</a>
+                    </div>
+
+                    <div class="ai-messages-box" id="inline-ai-messages">
+                        <div class="ai-msg ai-msg-bot">
+                            您好！歡迎來到永豐金證券天母分公司 <strong>劉怡汎業務副理</strong> 的專屬 AI 互動導覽室 👋<br><br>
+                            我已即時同步<strong>當下全球（美股／聯準會／AI 半導體）與台灣國內財經新聞</strong>，並內建完整的理財商品知識庫。您可以直接點選左側新聞、下方快捷問題，或自由輸入任何問題詢問我！
+                        </div>
+                    </div>
+
+                    <div class="ai-chips-bar" id="inline-ai-chips"></div>
+
+                    <div class="ai-input-area">
+                        <input type="text" class="ai-input-field" id="inline-ai-input" placeholder="請輸入您的問題（例如：最近聯準會與科技股震盪，FCN 與 ETF 該怎麼配置？）" />
+                        <button type="button" class="ai-send-btn" id="inline-ai-send">立即詢問</button>
+                    </div>
+
+                    <div class="ai-bottom-actions">
+                        <span style="color:#64748B;">💡 AI 導覽僅供金融知識與公開時事參考，不構成個別投資勸誘</span>
+                        <div class="ai-bottom-links">
+                            <a class="ai-mini-cta ai-mini-cta-line" href="https://line.me/ti/p/~evonne32016" target="_blank" rel="noopener">📱 加劉怡汎 LINE (evonne32016)</a>
+                            <a class="ai-mini-cta ai-mini-cta-radar" href="https://line.me/R/ti/p/@599erudf" target="_blank" rel="noopener">🎯 AI 雷達助理 (@599erudf)</a>
+                            <a class="ai-mini-cta ai-mini-cta-open" href="online_open.html">📝 立即線上開戶</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none;padding-top:0;">
+                <p>© 2026 永豐金證券天母分公司 劉怡汎業務副理｜114年金管證總字第0058號｜投資一定有風險，申購前請詳閱公開說明書與產品條件書。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="advisor_ai.js"></script>
+</body>
+</html>
