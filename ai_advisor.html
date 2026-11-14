@@ -9,7 +9,7 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
     <link href="styles.css" rel="stylesheet"/>
-    <link href="advisor_ai.css?v=20261114v3" rel="stylesheet"/>
+    <link href="advisor_ai.css?v=20261115v5" rel="stylesheet"/>
     <link rel="canonical" href="https://howard7199.github.io/financial-advisor/ai_advisor.html"/>
 </head>
 <body>
@@ -37,32 +37,32 @@
         <div class="container">
             <div class="ai-advisor-header">
                 <div class="ai-advisor-badge">✨ Google Cloud AI 雙引擎驅動・即時財經時事同步</div>
-                <h1 class="ai-advisor-title">🤖 理財商品／FCN 互動導覽 ＆ 全球財經問答室</h1>
+                <h1 class="ai-advisor-title">🤖 全球財經時事 ＆ 全方位理財互動問答室</h1>
                 <p class="ai-advisor-subtitle">
-                    結合當下最新<strong>全球（美股／聯準會／AI 半導體）與台灣國內財經新聞</strong>，為您全方位解答 <strong>FCN 固定配息結構型商品</strong>、<strong>豐存股 ETF</strong>、<strong>美股複委託</strong>與資產傳承問題。
+                    即時整合<strong>全球（美股／聯準會／AI 產業）與台灣國內財經新聞</strong>，客觀為您解答市場趨勢、多元資產配置思路與各類理財工具疑問。
                 </p>
             </div>
 
             <div class="ai-workspace-grid">
                 <div class="ai-side-panel">
                     <div class="ai-panel-card">
-                        <h3>💰 FCN 結構型商品一鍵導覽</h3>
+                        <h3>🧭 熱門理財與市場主題導覽</h3>
                         <div class="fcn-mini-terms">
-                            <button type="button" class="fcn-term-btn" data-ai-prompt="請用白話文完整介紹什麼是 FCN 固定配息結構型商品？適合什麼樣的投資人與市場環境？">
-                                <strong>📌 認識 FCN</strong>
-                                <span>運作原理與適合客群</span>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="請幫我整理當下最新全球（美股、聯準會利率）與台灣國內財經新聞的核心重點與市場觀察！">
+                                <strong>📊 全球與台股時事</strong>
+                                <span>美股・Fed・台股最新焦點</span>
                             </button>
-                            <button type="button" class="fcn-term-btn" data-ai-prompt="請詳細解釋 FCN 的執行價(Strike)、敲出價(KO提前出場)與敲入價(KI下限保護)分別是什麼意思？什麼情況下會接到股票？">
-                                <strong>🛡️ KI / KO / Strike</strong>
-                                <span>敲入敲出與接股條件</span>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="面對目前股市高檔震盪，投資人常擔心追高被套牢、空手又怕踏空，實務上有哪些兼顧下檔防禦與穩定現金流的多元配置思路？">
+                                <strong>⚖️ 高檔震盪配置法</strong>
+                                <span>追高風險與多元工具比較</span>
                             </button>
-                            <button type="button" class="fcn-term-btn" data-ai-prompt="在近期全球科技股與聯準會利率震盪環境下，配置 FCN 在挑選連結標的與設定 KI 保護價時要注意什麼風險？">
-                                <strong>⚖️ 震盪市配置法</strong>
-                                <span>時事波動與風險揭露</span>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="透過國內券商「複委託」投資美股，跟自己開海外券商相比，在海外所得稅務、遺產傳承與資金安全上有什麼差異？">
+                                <strong>🌍 美股複委託優勢</strong>
+                                <span>稅務・資產傳承・安全性</span>
                             </button>
-                            <button type="button" class="fcn-term-btn" data-ai-prompt="什麼是把 FCN 每月配息轉投入豐存股定期定額的『母錢領息、子錢滾利』雙引擎策略？申購 FCN 需要什麼專業投資人(PI)資格？">
-                                <strong>🔄 母錢配息滾利</strong>
-                                <span>PI 資格與 ETF 搭配</span>
+                            <button type="button" class="fcn-term-btn" data-ai-prompt="請用客觀白話的方式介紹什麼是 FCN 固定配息結構型商品？它的折價執行(Strike)、敲出(KO)與敲入保護(KI)機制及風險是什麼？">
+                                <strong>📌 認識 FCN 機制</strong>
+                                <span>運作原理・保護價與風險</span>
                             </button>
                         </div>
                     </div>
@@ -72,20 +72,20 @@
                             <span>🌍 即時全球＆台灣財經焦點</span>
                             <span id="live-news-stamp" style="font-size:0.72rem;color:#94A3B8;font-weight:400;">同步中...</span>
                         </h3>
-                        <p style="margin:0 0 0.65rem 0;font-size:0.76rem;color:#94A3B8;">👇 點擊任一新聞標題，AI 立即分析該時事對投資配置的影響：</p>
+                        <p style="margin:0 0 0.65rem 0;font-size:0.76rem;color:#94A3B8;">👇 點擊任一新聞標題，AI 立即於上方問答區為您深度解析：</p>
                         <div class="news-live-list" id="live-news-list">
                             <div class="news-live-item">正在載入最新美股、聯準會與台股即時新聞...</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="ai-chat-card" style="height: 680px;">
+                <div class="ai-chat-card">
                     <div class="ai-chat-topbar">
                         <div class="ai-chat-topbar-info">
                             <div class="ai-avatar-circle">🤖</div>
                             <div>
-                                <h4>劉怡汎副理專屬 — AI 理財與全球財經導覽顧問</h4>
-                                <p>支援 FCN 條件機制解說・六大理財服務比較・國內外即時財經問答</p>
+                                <h4>劉怡汎副理專屬 — AI 財經時事與資產配置顧問</h4>
+                                <p>國內外即時財經解讀・多元理財服務比較・結構型與存股知識導覽</p>
                             </div>
                         </div>
                         <a href="https://line.me/R/ti/p/@599erudf" target="_blank" rel="noopener" class="ai-fullscreen-link">🎯 開啟 LINE AI 雷達助理 ↗</a>
@@ -93,15 +93,15 @@
 
                     <div class="ai-messages-box" id="inline-ai-messages">
                         <div class="ai-msg ai-msg-bot">
-                            您好！歡迎來到永豐金證券天母分公司 <strong>劉怡汎業務副理</strong> 的專屬 AI 互動導覽室 👋<br><br>
-                            我已即時同步<strong>當下全球（美股／聯準會／AI 半導體）與台灣國內財經新聞</strong>，並內建完整的理財商品知識庫。您可以直接點選左側新聞、下方快捷問題，或自由輸入任何問題詢問我！
+                            您好！歡迎來到永豐金證券天母分公司 <strong>劉怡汎業務副理</strong> 的專屬 AI 財經與理財互動問答室 👋<br>
+                            我已即時同步<strong>當下全球（美股／聯準會／AI 產業）與台灣國內財經新聞</strong>。無論您想了解近期市場震盪原因、台美股動態、ETF 定期定額、複委託稅務傳承或各類理財商品機制，都歡迎直接在下方輸入問題或點選新聞標題！
                         </div>
                     </div>
 
                     <div class="ai-chips-bar" id="inline-ai-chips"></div>
 
                     <div class="ai-input-area">
-                        <input type="text" class="ai-input-field" id="inline-ai-input" placeholder="請輸入您的問題（例如：最近聯準會與科技股震盪，FCN 與 ETF 該怎麼配置？）" />
+                        <input type="text" class="ai-input-field" id="inline-ai-input" placeholder="請輸入您想了解的財經時事、市場趨勢或理財配置問題..." />
                         <button type="button" class="ai-send-btn" id="inline-ai-send">立即詢問</button>
                     </div>
 
@@ -126,6 +126,6 @@
         </div>
     </footer>
 
-    <script src="advisor_ai.js?v=20261114v4"></script>
+    <script src="advisor_ai.js?v=20261115v5"></script>
 </body>
 </html>

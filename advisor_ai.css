@@ -1,4 +1,4 @@
-/* === 永豐金證券 劉怡汎業務副理 — AI 理財與 FCN 互動導覽樣式 === */
+/* === 永豐金證券 劉怡汎業務副理 — AI 財經時事與資產配置互動導覽樣式 (全寬自適應大視野版) === */
 
 .hero-cta {
     flex-wrap: wrap;
@@ -32,11 +32,15 @@
 
 /* --- 首頁與獨立頁 AI 互動導覽專區 --- */
 .ai-advisor-section {
-    padding: 5.5rem 0;
+    padding: 4.5rem 0;
     background: linear-gradient(160deg, #0F172A 0%, #1E293B 55%, #1E3A8A 100%);
     color: #F8FAFC;
     position: relative;
     overflow: hidden;
+}
+
+.ai-advisor-section .container {
+    max-width: 1180px;
 }
 
 .ai-advisor-section::before {
@@ -46,14 +50,14 @@
     right: -120px;
     width: 420px;
     height: 420px;
-    background: radial-gradient(circle, rgba(200, 22, 29, 0.22) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(200, 22, 29, 0.18) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
 
 .ai-advisor-header {
     text-align: center;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2rem;
 }
 
 .ai-advisor-badge {
@@ -67,141 +71,52 @@
     border-radius: 999px;
     font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.8rem;
 }
 
 .ai-advisor-title {
-    font-size: 2.3rem;
+    font-size: 2.15rem;
     font-weight: 800;
     color: #FFFFFF;
-    margin: 0 0 0.7rem 0;
+    margin: 0 0 0.6rem 0;
 }
 
 .ai-advisor-subtitle {
     color: #CBD5E1;
-    font-size: 1.05rem;
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.ai-workspace-grid {
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 1.75rem;
-    align-items: stretch;
-}
-
-.ai-side-panel {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 18px;
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    backdrop-filter: blur(12px);
-}
-
-.ai-panel-card {
-    background: rgba(15, 23, 42, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
-    padding: 1.1rem;
-}
-
-.ai-panel-card h3 {
-    margin: 0 0 0.75rem 0;
     font-size: 1.02rem;
-    color: #FDE68A;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.65;
 }
 
-.fcn-mini-terms {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-}
-
-.fcn-term-btn {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 0.65rem 0.75rem;
-    color: #F1F5F9;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: inherit;
-}
-
-.fcn-term-btn:hover {
-    background: rgba(200, 22, 29, 0.28);
-    border-color: rgba(248, 113, 113, 0.6);
-    transform: translateY(-2px);
-}
-
-.fcn-term-btn strong {
-    display: block;
-    font-size: 0.88rem;
-    color: #FFFFFF;
-}
-
-.fcn-term-btn span {
-    font-size: 0.75rem;
-    color: #94A3B8;
-}
-
-.news-live-list {
+/* 全寬度上下堆疊架構：上方 100% 滿版問答主舞台（重點最大化！），下方雙欄主題與即時財經新聞 */
+.ai-workspace-grid {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    max-height: 290px;
-    overflow-y: auto;
-    padding-right: 4px;
+    gap: 1.5rem;
 }
 
-.news-live-item {
-    background: rgba(255, 255, 255, 0.04);
-    border-left: 3px solid #C8161D;
-    border-radius: 6px;
-    padding: 0.55rem 0.7rem;
-    font-size: 0.83rem;
-    color: #E2E8F0;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    line-height: 1.45;
-}
-
-.news-live-item:hover {
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.news-live-cat {
-    font-size: 0.72rem;
-    color: #93C5FD;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 2px;
-}
-
+/* 問答主舞台排第一順位，100% 全寬、高度隨回答內容自動完整展開，徹底告別窄小內捲軸！ */
 .ai-chat-card {
+    order: 1;
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
     background: #FFFFFF;
     color: #1E293B;
-    border-radius: 18px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.42);
     display: flex;
     flex-direction: column;
-    height: 640px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: visible;
+    border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .ai-chat-topbar {
     background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
     color: #FFFFFF;
-    padding: 1rem 1.35rem;
+    padding: 1rem 1.5rem;
+    border-radius: 19px 19px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -212,7 +127,7 @@
 .ai-chat-topbar-info {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.85rem;
 }
 
 .ai-avatar-circle {
@@ -229,13 +144,13 @@
 
 .ai-chat-topbar h4 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     font-weight: 700;
 }
 
 .ai-chat-topbar p {
     margin: 2px 0 0 0;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: #CBD5E1;
 }
 
@@ -244,7 +159,7 @@
     text-decoration: none;
     font-size: 0.82rem;
     font-weight: 600;
-    padding: 0.4rem 0.8rem;
+    padding: 0.42rem 0.85rem;
     border: 1px solid rgba(253, 230, 138, 0.45);
     border-radius: 8px;
     white-space: nowrap;
@@ -255,54 +170,67 @@
     background: rgba(253, 230, 138, 0.15);
 }
 
+/* 對話回答區：未提問時緊湊無大片留白；提問後隨文章長度 100% 完整撐開，直接滑網頁即可舒適閱讀全文！ */
 .ai-messages-box {
-    flex: 1;
-    overflow-y: auto;
-    padding: 1.25rem;
+    padding: 1.5rem 1.75rem;
     background: #F8FAFC;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.15rem;
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
 }
 
 .ai-msg {
-    max-width: 88%;
-    padding: 0.95rem 1.15rem;
-    border-radius: 14px;
-    font-size: 0.95rem;
-    line-height: 1.68;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    font-size: 1.02rem;
+    line-height: 1.82;
     word-break: break-word;
 }
 
+/* AI 回答泡泡佔滿 100% 寬度，像專業財經專欄一樣寬敞清晰 */
 .ai-msg-bot {
-    align-self: flex-start;
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
     background: #FFFFFF;
     color: #1E293B;
     border: 1px solid #E2E8F0;
-    border-top-left-radius: 4px;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    border-left: 4px solid #1E3A8A;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 
 .ai-msg-user {
+    max-width: 85%;
     align-self: flex-end;
     background: linear-gradient(135deg, #1E3A8A, #2563EB);
     color: #FFFFFF;
     border-top-right-radius: 4px;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.98rem;
 }
 
 .ai-msg-bot h3, .ai-msg-bot h4 {
     color: #1E3A8A;
-    margin: 0.8rem 0 0.4rem 0;
-    font-size: 1rem;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.12rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.ai-msg-bot h3:first-child, .ai-msg-bot h4:first-child {
+    margin-top: 0;
 }
 
 .ai-msg-bot ul, .ai-msg-bot ol {
-    margin: 0.4rem 0;
-    padding-left: 1.3rem;
+    margin: 0.5rem 0 0.85rem 0;
+    padding-left: 1.4rem;
 }
 
 .ai-msg-bot li {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.45rem;
 }
 
 .ai-msg-bot strong {
@@ -310,32 +238,32 @@
 }
 
 .ai-msg-sources {
-    margin-top: 0.7rem;
-    padding-top: 0.55rem;
+    margin-top: 0.9rem;
+    padding-top: 0.65rem;
     border-top: 1px dashed #CBD5E1;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    font-size: 0.74rem;
+    gap: 0.45rem;
+    font-size: 0.78rem;
     color: #64748B;
 }
 
 .ai-source-tag {
     background: #EFF6FF;
     color: #1E40AF;
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 999px;
     font-weight: 500;
 }
 
+/* 快捷問題膠囊：自動換行，消除醜陋的灰色橫向捲軸 */
 .ai-chips-bar {
-    padding: 0.65rem 1rem;
+    padding: 0.85rem 1.5rem;
     background: #F1F5F9;
     border-top: 1px solid #E2E8F0;
     display: flex;
-    gap: 0.5rem;
-    overflow-x: auto;
-    white-space: nowrap;
+    flex-wrap: wrap;
+    gap: 0.55rem;
 }
 
 .ai-chip-btn {
@@ -343,13 +271,14 @@
     color: #1E3A8A;
     border: 1px solid #BFDBFE;
     border-radius: 999px;
-    padding: 0.4rem 0.85rem;
-    font-size: 0.82rem;
+    padding: 0.45rem 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: inherit;
-    flex-shrink: 0;
+    text-align: left;
+    line-height: 1.4;
 }
 
 .ai-chip-btn:hover {
@@ -359,19 +288,19 @@
 }
 
 .ai-input-area {
-    padding: 0.85rem 1rem;
+    padding: 1rem 1.5rem;
     background: #FFFFFF;
     border-top: 1px solid #E2E8F0;
     display: flex;
-    gap: 0.6rem;
+    gap: 0.75rem;
 }
 
 .ai-input-field {
     flex: 1;
     border: 1.5px solid #CBD5E1;
-    border-radius: 10px;
-    padding: 0.7rem 1rem;
-    font-size: 0.95rem;
+    border-radius: 12px;
+    padding: 0.82rem 1.1rem;
+    font-size: 1rem;
     font-family: inherit;
     outline: none;
     transition: border-color 0.2s;
@@ -385,12 +314,13 @@
     background: linear-gradient(135deg, #C8161D, #991B1B);
     color: #FFFFFF;
     border: none;
-    border-radius: 10px;
-    padding: 0 1.35rem;
+    border-radius: 12px;
+    padding: 0 1.6rem;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     cursor: pointer;
     font-family: inherit;
+    white-space: nowrap;
     transition: opacity 0.2s, transform 0.2s;
 }
 
@@ -404,15 +334,16 @@
 }
 
 .ai-bottom-actions {
-    padding: 0.55rem 1rem;
+    padding: 0.7rem 1.5rem;
     background: #F8FAFC;
     border-top: 1px solid #E2E8F0;
+    border-radius: 0 0 19px 19px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
+    gap: 0.6rem;
+    font-size: 0.82rem;
 }
 
 .ai-bottom-links {
@@ -424,15 +355,115 @@
 .ai-mini-cta {
     text-decoration: none;
     font-weight: 600;
-    padding: 3px 10px;
+    padding: 4px 11px;
     border-radius: 6px;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
 }
 
 .ai-mini-cta-line { background: #DCFCE7; color: #166534; }
 .ai-mini-cta-radar { background: #DBEAFE; color: #1E40AF; }
 .ai-mini-cta-open { background: #FEE2E2; color: #991B1B; }
 
+/* 下方輔助資訊面板：左右雙欄並排（左：多元主題捷徑｜右：12則即時全球＆台灣新聞雙欄網格） */
+.ai-side-panel {
+    order: 2;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 1.35rem;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 1.25rem;
+    backdrop-filter: blur(12px);
+}
+
+.ai-panel-card {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.15rem;
+}
+
+.ai-panel-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1rem;
+    color: #FDE68A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fcn-mini-terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+}
+
+.fcn-term-btn {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 0.7rem 0.8rem;
+    color: #F1F5F9;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.fcn-term-btn:hover {
+    background: rgba(59, 130, 246, 0.25);
+    border-color: rgba(147, 197, 253, 0.6);
+    transform: translateY(-2px);
+}
+
+.fcn-term-btn strong {
+    display: block;
+    font-size: 0.88rem;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+.fcn-term-btn span {
+    font-size: 0.75rem;
+    color: #CBD5E1;
+}
+
+.news-live-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.65rem;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.news-live-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #38BDF8;
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.84rem;
+    color: #E2E8F0;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    line-height: 1.48;
+}
+
+.news-live-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+.news-live-cat {
+    font-size: 0.72rem;
+    color: #93C5FD;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* --- 子頁面右下角浮動抽屜（同樣加大閱讀視野！） --- */
 .ai-fab-button {
     position: fixed;
     right: 24px;
@@ -462,26 +493,75 @@
     position: fixed;
     right: 24px;
     bottom: 86px;
-    width: 390px;
+    width: 620px;
     max-width: calc(100vw - 32px);
-    height: 540px;
-    max-height: calc(100vh - 120px);
+    height: min(82vh, 760px) !important;
     z-index: 9999;
     display: none;
+    overflow: hidden;
+}
+
+.ai-fab-drawer .ai-messages-box {
+    flex: 1;
+    overflow-y: auto;
 }
 
 .ai-fab-drawer.open {
     display: flex;
 }
 
+/* --- 平板與手機版自適應：滿版舒適大字閱讀，零壓迫感 --- */
 @media (max-width: 960px) {
-    .ai-workspace-grid {
-        grid-template-columns: 1fr;
+    .ai-advisor-section {
+        padding: 3rem 0;
     }
-    .ai-chat-card {
-        height: 560px;
+    .ai-advisor-section .container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
     .ai-advisor-title {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+    }
+    .ai-side-panel {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .ai-chat-topbar {
+        padding: 0.85rem 1rem;
+        flex-wrap: wrap;
+    }
+    .ai-messages-box {
+        padding: 1rem;
+    }
+    .ai-msg {
+        padding: 1rem 1.1rem;
+        font-size: 0.98rem;
+        line-height: 1.78;
+    }
+    .ai-chips-bar {
+        padding: 0.7rem 1rem;
+    }
+    .ai-input-area {
+        padding: 0.8rem 1rem;
+        flex-direction: column;
+    }
+    .ai-send-btn {
+        padding: 0.78rem 1rem;
+        width: 100%;
+    }
+    .ai-bottom-actions {
+        padding: 0.65rem 1rem;
+    }
+    .news-live-list {
+        grid-template-columns: 1fr;
+    }
+    /* 手機開啟浮動視窗時直接接近全螢幕閱讀 */
+    .ai-fab-drawer {
+        right: 8px;
+        left: 8px;
+        bottom: 76px;
+        width: auto;
+        max-width: none;
+        height: calc(100vh - 92px) !important;
     }
 }

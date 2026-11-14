@@ -81,7 +81,11 @@
             }
             div.innerHTML = inner;
             messagesBox.appendChild(div);
-            messagesBox.scrollTop = messagesBox.scrollHeight;
+            if (messagesBox.id === "fab-messages") {
+                messagesBox.scrollTop = messagesBox.scrollHeight;
+            } else {
+                div.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
         }
 
         function appendUserMessage(text) {
@@ -89,7 +93,11 @@
             div.className = "ai-msg ai-msg-user";
             div.textContent = text;
             messagesBox.appendChild(div);
-            messagesBox.scrollTop = messagesBox.scrollHeight;
+            if (messagesBox.id === "fab-messages") {
+                messagesBox.scrollTop = messagesBox.scrollHeight;
+            } else {
+                div.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
         }
 
         function renderChips(questions) {
@@ -155,10 +163,10 @@
         });
 
         renderChips([
-            "什麼是 FCN 固定配息結構型商品？敲入(KI)與敲出(KO)怎麼運作？",
             "幫我整理當下最新全球（美股/Fed）與台灣國內財經新聞重點！",
-            "近期市場震盪下，FCN、豐存股定期定額與美股複委託怎麼搭配？",
-            "買美股用「永豐金複委託」跟海外券商在報稅與安全上差在哪？",
+            "目前市場高檔震盪，怕追高套牢又不想閒置資金，有哪些穩健配置思路？",
+            "買美股用「永豐金複委託」跟海外券商在報稅與傳承上差在哪？",
+            "什麼是 FCN 固定配息結構型商品？運作機制與風險有哪些？",
         ]);
 
         return { sendQuestion };
@@ -184,10 +192,10 @@
                     const item = document.createElement("div");
                     item.className = "news-live-item";
                     item.innerHTML = `<span class="news-live-cat">${escapeHtml(g.category)}</span>${escapeHtml(h.title)}`;
-                    item.title = "點擊詢問 AI 這則財經時事對投資與 FCN 配置的影響";
+                    item.title = "點擊讓 AI 為您深度解析這則財經時事的市場重點與啟示";
                     item.addEventListener("click", () => {
                         if (askCallback) {
-                            askCallback(`針對這則最新財經新聞：「${h.title}」，對目前美股、台股與 FCN 結構型商品／ETF 資產配置有什麼觀察與風險提醒？`);
+                            askCallback(`請幫我解析這則最新財經新聞：「${h.title}」，背後的市場關鍵重點以及對投資人有哪些觀察與啟示？`);
                         }
                     });
                     containerEl.appendChild(item);
